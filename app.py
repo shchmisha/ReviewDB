@@ -72,7 +72,7 @@ def create_review(item: ReviewCreate, db: Session = Depends(get_db)):
     db_item = ReviewDB(
         text=item.text,
         sentiment=sentiment,
-        created_at = datetime.now().isoformat()
+        created_at = datetime.utcnow().isoformat()
     )
     db.add(db_item)
     db.commit()
