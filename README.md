@@ -1,4 +1,4 @@
 bash
 КопироватьРедактировать
 pip install fastapi uvicorn
-uvicorn main:app --reload
+uvicorn app:app --reload
